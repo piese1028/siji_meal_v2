@@ -17,7 +17,7 @@ fun publish() {
     val client = login()
     client.actions()
         .timeline()
-        .uploadPhoto(genTimelineImage("[점심]\n${getLunch()}",""),"${getNowDate()} 급식")
+        .uploadPhoto(genTimelineImage("${getLunch()}"),"${getNowDate()} 급식")
         .thenAccept {
             println(
                 """
@@ -30,7 +30,7 @@ fun publish() {
         .join() // block current thread until complete
     client.actions()
         .story()
-        .uploadPhoto(genStoryImage("[점심]\n${getLunch()}"))
+        .uploadPhoto(genStoryImage("${getLunch()}"))
         .thenAccept {
             println(
                 """
