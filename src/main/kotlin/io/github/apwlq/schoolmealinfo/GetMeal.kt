@@ -14,13 +14,6 @@ fun getLunch(): String {
     val meal = neis.getMealsByAbsoluteDay(getNowDate(), sch.scCode, sch.schoolCode)
     return meal.lunch.joinToString("\n")
 }
-fun getDinner(): String {
-    val neis = NeisApi.Builder().build()
-    val schoolName = System.getenv("SCHOOL_NAME")
-    val sch = neis.getSchoolByName(schoolName).first()
-    val meal = neis.getMealsByAbsoluteDay(getNowDate(), sch.scCode, sch.schoolCode)
-    return meal.dinner.joinToString("\n")
-}
 
 
 fun getNowDate(): String {

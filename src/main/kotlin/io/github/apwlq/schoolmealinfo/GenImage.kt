@@ -10,9 +10,9 @@ import java.awt.image.BufferedImage
 import java.io.File
 import javax.imageio.ImageIO
 
-fun genTimelineImage(lunch: String, dinner: String): File {
+fun genTimelineImage(lunch: String): File {
     val png = File("output/timeline_dist.png")
-    AddTextToImgByTimeline.execute(File("assets/image/timeline.png"), lunch, dinner, png, date = getNowDate().split("")[1] + getNowDate().split("")[2] + getNowDate().split("")[3] + getNowDate().split("")[4] + "." + getNowDate().split("")[5] + getNowDate().split("")[6] + "." + getNowDate().split("")[7] + getNowDate().split("")[8] + ".")
+    AddTextToImgByTimeline.execute(File("assets/image/timeline.png"), lunch, png, date = getNowDate().split("")[1] + getNowDate().split("")[2] + getNowDate().split("")[3] + getNowDate().split("")[4] + "." + getNowDate().split("")[5] + getNowDate().split("")[6] + "." + getNowDate().split("")[7] + getNowDate().split("")[8] + ".")
     val jpg = File("output/timeline_dist.jpg")
     pngToJpg(png, jpg)
     return jpg

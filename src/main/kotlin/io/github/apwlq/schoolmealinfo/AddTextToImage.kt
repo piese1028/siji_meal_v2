@@ -66,7 +66,7 @@ object AddTextToImgByStory {
 
 object AddTextToImgByTimeline {
     @JvmStatic
-    fun execute(file: File, lunch: String, dinner: String, out: File, date: String) {
+    fun execute(file: File, lunch: String, out: File, date: String) {
         //read the image
         val image = ImageIO.read(file)
         //get the Graphics object

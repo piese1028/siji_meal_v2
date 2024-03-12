@@ -9,6 +9,6 @@ import kotlin.system.exitProcess
 
 fun main()  {
 
-    genStoryImage("[점심]\n${getLunch()}\n\n[저녁]\n${getDinner()}")
-    genTimelineImage("[점심]\n${getLunch()}","[저녁]\n${getDinner()}")
+    genStoryImage("${getLunch()}")
+    genTimelineImage("${getLunch()}")
 }
